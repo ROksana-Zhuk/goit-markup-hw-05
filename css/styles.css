@@ -419,7 +419,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #2E2F4266;
 
     top: 0;
     left: 0;
@@ -439,16 +439,72 @@ ul {
 .modal {
     background-color: #FCFCFC;
     border-radius: 4px;
-    padding: 16px ;
     box-shadow: 0px 1px 1px 0px #00000024,
                 0px 1px 3px 0px #0000001F,
                 0px 2px 1px 0px #00000033;
     max-width: 408px;
     max-height: 80%;
     overflow-y: auto;
+    padding: 72px 24px;
+    margin-bottom: -80px;
 
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    gap: 8px;
+    border-radius: 4px;
+
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2E2F42;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    resize: none;
+}
+
+textarea {
+    resize: none;
+}
+
+input {
+    padding: 4px;
+    font-family: inherit;
+    gap: 8px;
+}
+.form-icons {
+    position: relative;
+}
+
+.send-button {
+    padding: 16px 32px;
+    gap: 10px;
+    border-radius: 4px;
+    background-color: #4D5AE5;
+    color: #FFFFFF;
+    display: inline-block;
+    max-width: 169px;
+    margin-top: 24px;
+
+}
 
 .footer {
     padding: 100px 0px;
@@ -508,17 +564,55 @@ ul {
     margin-right: 120px;
 }
 
+.social-media {
+    margin-right: 80px;
+}
+
 .footer-text {
     margin-bottom: 16px;
     font-weight: 500;
     color: #FFFFFF;
 }
 
-.footer-social-img {
-
-}
-
 .social-link-footer:hover,
 .social-link-footer:focus {
     background-color: #31D0AA;
+}
+
+.footer-input {
+    background-color: #2E2F42;
+    color: #FFFFFF;
+    height: 40px;
+    width: 264px;
+    margin-right: 24px;
+    border-radius: 4px;
+}
+
+.subscribe-button {
+    background-color: #4d5ae5;
+    border: none;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 24px;
+    width: 165px;
+    height: 40px;
+    border-radius: 4px;
+
+}
+
+.subscribe-container {
+    display: flex;
+}
+
+footer .form-icons {
+    margin-left: 16px;
+    padding: 2px 0;
 }
