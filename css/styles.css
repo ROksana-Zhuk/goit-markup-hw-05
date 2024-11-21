@@ -552,10 +552,6 @@ footer p {
     margin: 0 16px;
 }
 
-.subscribe-container {
-    display: flex;
-}
-
 .footer-form {
     flex-direction: row;
 }
