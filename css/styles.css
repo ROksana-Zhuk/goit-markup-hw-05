@@ -499,7 +499,7 @@ footer p {
 }
 
 .footer-input {
-    background-color: #2E2F42;
+    background-color: transparent;
     color: #FFFFFF;
     height: 40px;
     width: 264px;
@@ -510,6 +510,8 @@ footer p {
     letter-spacing: 0.04em;
     text-align: left;
     padding-left: 16px;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .footer-input::placeholder {
@@ -525,20 +527,22 @@ footer p {
     background-color: #4d5ae5;
     border: none;
     color: #FFFFFF;
-    font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.04em;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-bottom: 8px;
     padding-top: 8px;
     padding-left: 24px;
-    width: 165px;
     height: 40px;
     border-radius: 4px;
     fill: #FFFFFF;
+    min-width: 165px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
 }
 
 .subscribe-button:hover,
@@ -554,6 +558,7 @@ footer p {
 
 .footer-form {
     flex-direction: row;
+    gap: 24px;
 }
 
 footer .form-icons {
@@ -564,6 +569,11 @@ footer .form-icons {
 .footer-subscribe {
     margin-left: auto;
 }
+
+.footer-label {
+
+}
+
 .backdrop {
     position: fixed;
     background-color: #2E2F4266;
