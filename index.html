@@ -466,18 +466,23 @@
         <div class="footer-subscribe">
           <p class="footer-text">Subscribe</p>
           <div class="subscribe-container">
-            <input
-              class="footer-input"
-              type="email"
-              name="email"
-              placeholder="E-mail"
-            />
-            <button class="subscribe-button" type="submit">
-              Subscribe
-              <svg width="24" height="24" class="form-icons">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
-            </button>
+            <form>
+              <label>
+                <input
+                  id="email-id"
+                  class="footer-input"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                />
+              </label>
+              <button class="subscribe-button" type="submit">
+                Subscribe
+                <svg width="24" height="24" class="form-icons">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -550,8 +555,8 @@
           <div class="form-field form-checkbox">
             <input type="checkbox" name="the Privacy Policy" value="check" />
             <label class="form-label" for="input-checkbox">
-              <span>
-                accept the terms and conditions of the
+              <span class="checkbox-wrapper">
+                I accept the terms and conditions of the
                 <a>Privacy Policy</a>
               </span>
             </label>

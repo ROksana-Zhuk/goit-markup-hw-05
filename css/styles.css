@@ -168,7 +168,9 @@ ul {
 }
 
 .order-button:hover,
-.order-button:focus {
+.order-button:focus,
+.send-button:hover,
+.send-button:focus {
     background-color: #404BBF;
     transition-property: background-color, transform;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -534,6 +536,9 @@ footer .form-icons {
     padding: 2px 0;
 }
 
+.footer-subscribe {
+    margin-left: auto;
+}
 .backdrop {
     position: fixed;
     background-color: #2E2F4266;
@@ -571,8 +576,13 @@ footer .form-icons {
         0px 1px 3px 0px #0000001F,
         0px 2px 1px 0px #00000033;
 
+    padding-top: 72px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+
     overflow-y: auto;
-    transform: translate (-50%, -50%;)
+    transform: translateX(-50%) translateY(-50%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -583,12 +593,20 @@ footer .form-icons {
     background: none;
     border: none;
 }
-.modal-btn:hover,
-.modal-btn:focus {
-    fill: #404BBF;
-    color: #FFFFFF;
+
+/* Тут неправильний селектор.
+
+Він має змінювати властивості SVG - класс "icon-close".
+Подивись, які властиості має той клас 'icon-close' і які з них треба
+міняти при ховері.
+
+*/
+.modal-btn:hover .icon-close,
+.modal-btn:focus .icon-close{
+    background-color: #404BBF;
+    fill: #FFFFFF;
     border: none;
-    transition-property: fill, transform;
+    transition-property: background-color, color, transform;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -601,6 +619,7 @@ footer .form-icons {
     padding: 8px;
     margin-bottom: 24px;
     left: 336px;
+    fill: #2E2F42;;
 }
 
 form {
@@ -612,7 +631,7 @@ form {
 }
 
 .modal-text {
-    padding-bottom: 16px;
+    padding-bottom: or16px;
 }
 
 
@@ -621,6 +640,7 @@ label {
     flex-direction: column;
     max-width: 360px;
     resize: none;
+    padding: 0;
 }
 
 .form-label {
@@ -644,25 +664,45 @@ label {
 .input-border {
     border: 1px solid #2E2F4266;
     border-radius: 4px;
-}
-
-textarea {
-    resize: none;
-    width: 100%;
-    height: 120px;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.04em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #2E2F4266;
-    padding-left: 16px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding-left:16px;
+    padding-right: 16px;
     padding-top: 8px;
+}
+
+textarea.placeholder {
+    color: #2E2F4266;
 }
 
 .form-checkbox {
     display: flex;
+    /* visibility: hidden; */
+    color: #FFFFFF;
+    fill: transparent;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    width: 338px;
+    height: 16px;
+}
+
+.form-checkbox:checked {
+    fill: #404BBF;
 }
 
 .input-wrapper {
@@ -687,12 +727,15 @@ textarea {
 
 .send-button {
     padding: 16px 32px;
-    gap: 10px;
     border-radius: 4px;
     background-color: #4D5AE5;
     color: #FFFFFF;
     display: inline-block;
-    max-width: 169px;
-    margin-top: 24px;
+    width: 169px;
+    height: 56px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 24px;
 
 }
