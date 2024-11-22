@@ -741,7 +741,7 @@ form {
     fill: #4D5AE5;
 }
 
-form-textarea {
+.form-textarea {
     resize: none;
     width: 100%;
     height: 120px;
