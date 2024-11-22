@@ -764,9 +764,7 @@ textarea::placeholder {
 }
 
 .checkbox-label {
-    display: flex;
     margin-bottom: 24px;
-
 }
 
 .checkbox-span {
