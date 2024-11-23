@@ -484,10 +484,6 @@ footer p {
     margin-right: 120px;
 }
 
-.social-media {
-    margin-right: 80px;
-}
-
 .footer-text {
     margin-bottom: 16px;
     font-weight: 500;
@@ -504,7 +500,7 @@ footer p {
     color: #FFFFFF;
     height: 40px;
     width: 264px;
-    margin-right: 24px;
+
     border-radius: 4px;
     font-size: 12px;
     line-height: 24px;
@@ -535,29 +531,29 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    padding-left: 24px;
+    padding: 8px 24px;
     height: 40px;
     border-radius: 4px;
     fill: #FFFFFF;
     min-width: 165px;
     font-family: "Roboto", sans-serif;
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-button:hover,
 .subscribe-button:focus {
     background-color: #31D0AA;
     transition-property: background-color, transform;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .icon-send {
-    margin: 0 16px;
+    margin-left: 16px;
 }
 
 .footer-form {
+    display: flex;
     flex-direction: row;
     gap: 24px;
 }
@@ -569,10 +565,6 @@ footer .form-icons {
 
 .footer-subscribe {
     margin-left: auto;
-}
-
-.footer-label {
-
 }
 
 .backdrop {
@@ -653,32 +645,14 @@ footer .form-icons {
 
 .modal-btn:hover .icon-close,
 .modal-btn:focus .icon-close{
-    background-color: #404BBF;
     fill: #FFFFFF;
-    border: none;
-    transition-property: background-color, color, transform;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close {
-    border-radius: 50%;
-    background-color: #E7E9FC;
-    border: 1px solid #0000001A;
-    width: 24px;
-    height: 24px;
-    padding: 8px;
-    margin-bottom: 24px;
-    left: 336px;
     fill: #2E2F42;;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 360px;
-    gap: 8px;
-    border-radius: 4px;
-}
 
 .modal-text {
     margin-bottom: 16px;
@@ -791,7 +765,6 @@ textarea::placeholder {
 
 .input-wrapper {
     position: relative;
-    margin-bottom: 8px;
 }
 
 .form-icons {
@@ -808,13 +781,13 @@ textarea::placeholder {
     border-radius: 4px;
     background-color: #4D5AE5;
     color: #FFFFFF;
-    display: inline-block;
+    display: block;
     min-width: 169px;
     height: 56px;
     margin: 0 auto;
     cursor: pointer;
     border: none;
-    margin-bottom: 24px;
+    margin: 0 auto;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
